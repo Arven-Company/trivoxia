@@ -961,7 +961,7 @@ h3 { font-size: 24px; }
     linear-gradient(150deg, #34117A, #6B2EE8 60%, #2F3DBF);
   justify-content: space-between;
 }
-.about-brand img { height: 40px; width: auto; }
+.about-brand img { height: 40px; width: auto; align-self: flex-start; object-fit: contain; }
 .about-brand p { color: rgba(255, 255, 255, 0.85); font-size: 13.5px; }
 
 /* ---------------- faq ---------------- */
