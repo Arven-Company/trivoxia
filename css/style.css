@@ -823,6 +823,19 @@ h3 { font-size: 24px; }
 }
 .mcc-label { font-size: 12.5px; color: var(--ink-2); }
 .mcc-val { font-size: 30px; font-weight: 600; letter-spacing: -0.03em; margin: 2px 0 12px; }
+.mcc-chart { position: relative; }
+.mcc-chart svg { display: block; }
+.mcc-dot {
+  position: absolute;
+  right: 0;
+  top: 17.8%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--brand);
+  transform: translate(2px, -50%);
+}
 
 .cards-4 {
   display: grid;
