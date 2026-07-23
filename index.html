@@ -74,9 +74,9 @@
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
-        <h1>Funcionários de IA<br>para a sua clínica</h1>
+        <h1><span class="dia" data-dia data-dia-autoplay>Funcionários de IA<br>para a sua clínica</span></h1>
         <div class="hero-aside">
-          <p>Atendimento no WhatsApp 24/7, agenda inteligente, CRM automatizado e financeiro — tudo em uma única plataforma, 100% personalizada para a sua clínica.</p>
+          <p>Atendimento no WhatsApp 24/7, agenda inteligente, CRM automatizado e financeiro — tudo em uma única plataforma, <span class="mk" data-marker="highlight">100% personalizada</span> para a sua clínica.</p>
           <div class="hero-actions">
             <a href="#contato" class="btn btn-primary btn-lg">Quero meu Funcionário de IA</a>
             <a href="#demo" class="btn btn-outline btn-lg">Ver a IA em ação</a>
@@ -252,6 +252,23 @@
           <p>Agenda, CRM automatizado e módulo financeiro organizados sozinhos, sem digitação manual.</p>
         </div>
       </div>
+
+      <!-- diagrama de integração (animated beams) -->
+      <div class="integ reveal" id="integ" aria-label="Diagrama: WhatsApp e Instagram conectados ao Funcionário de IA, que alimenta agenda, CRM e financeiro">
+        <svg class="integ-svg" aria-hidden="true"></svg>
+        <div class="integ-col integ-in">
+          <div class="integ-node"><span class="integ-dot dot-wa"><svg width="22" height="22"><use href="#i-wa"/></svg></span><span class="integ-label">WhatsApp</span></div>
+          <div class="integ-node"><span class="integ-dot dot-ig"><svg width="22" height="22"><use href="#i-ig"/></svg></span><span class="integ-label">Instagram</span></div>
+        </div>
+        <div class="integ-col integ-mid">
+          <div class="integ-node"><span class="integ-dot dot-core"><img src="favicon.svg" alt="" width="34" height="34"></span><span class="integ-label"><strong>Funcionário de IA</strong></span></div>
+        </div>
+        <div class="integ-col integ-out">
+          <div class="integ-node"><span class="integ-dot"><svg width="20" height="20"><use href="#i-calendar"/></svg></span><span class="integ-label">Agenda</span></div>
+          <div class="integ-node"><span class="integ-dot"><svg width="20" height="20"><use href="#i-funnel"/></svg></span><span class="integ-label">CRM</span></div>
+          <div class="integ-node"><span class="integ-dot"><svg width="20" height="20"><use href="#i-chart"/></svg></span><span class="integ-label">Financeiro</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -261,7 +278,7 @@
       <div class="section-head reveal">
         <div>
           <span class="eyebrow">Funcionário de IA</span>
-          <h2>Atende, qualifica e agenda — enquanto você cuida de quem está na cadeira</h2>
+          <h2>Atende, qualifica e agenda — enquanto você cuida de <span class="mk" data-marker="underline">quem está na cadeira</span></h2>
         </div>
         <div class="section-aside">
           <p>Um atendente inteligente treinado com o tom, os tratamentos e os protocolos da sua clínica. Responde em segundos, nunca tira férias e registra tudo automaticamente.</p>
@@ -452,7 +469,7 @@
       <div class="contact-box reveal">
         <div class="contact-left">
           <span class="eyebrow">Pronto para começar?</span>
-          <h2>Veja a IA da sua clínica funcionando</h2>
+          <h2><span class="dia" data-dia>Veja a IA da sua clínica funcionando</span></h2>
           <p>Fale com um especialista, receba um diagnóstico gratuito e comece com 15 dias de teste.</p>
           <div class="contact-bullets">
             <div><svg class="ic" width="15" height="15"><use href="#i-check"/></svg> Diagnóstico gratuito da sua clínica</div>
@@ -544,5 +561,6 @@
 <a href="https://wa.me/5549988749755" target="_blank" rel="noopener" class="fab-wa" aria-label="Falar no WhatsApp"><svg width="26" height="26"><use href="#i-wa"/></svg></a>
 
 <script src="js/main.js"></script>
+<script src="js/effects.js"></script>
 </body>
 </html>
