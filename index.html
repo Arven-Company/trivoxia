@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrivoxIA — Funcionário de IA para clínicas de estética</title>
+  <meta name="description" content="A TrivoxIA cria funcionários de IA 100% personalizados para clínicas de estética: atendimento no WhatsApp 24/7, agenda inteligente, CRM automatizado e financeiro em uma única plataforma.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#6B2EE8">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:title" content="TrivoxIA — Funcionário de IA para clínicas de estética">
+  <meta property="og:description" content="Atendimento no WhatsApp 24/7, agenda cheia e CRM organizado — sem aumentar a equipe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://trivoxia.com">
+</head>
+<body>
+
+<!-- ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></g></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="3"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/></g></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-funnel" viewBox="0 0 24 24"><path d="M3 4h18l-7 9v6l-4 2v-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></g></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.5 5l-3 7v6a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2v-6l-3-7a2 2 0 0 0-1.8-1h-9.4A2 2 0 0 0 5.5 5z"/></g></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L7.9 10a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.7.1-.9-.4-2.2-.9-3.4-2.7-.3-.5.3-.5.9-1.5.1-.2 0-.3-.1-.5s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.2 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4z" fill="currentColor"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.8-.8.8-2.2 0-3-.8-.8-2.2-.8-3 0z"/><path d="M12 15l-3-3a20 20 0 0 1 6-10 8 8 0 0 1 7 7 20 20 0 0 1-10 6z"/><circle cx="15" cy="9" r="1.5"/></g></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="TrivoxIA — início">
+      <img src="assets/logo-trivoxia.png" alt="TrivoxIA" height="34">
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#solucoes">Soluções</a>
+      <a href="#plataforma">Plataforma</a>
+      <a href="#resultados">Cases</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-ghost">Entrar</a>
+      <a href="#contato" class="btn btn-primary">Falar com especialista</a>
+    </div>
+    <button class="nav-burger" id="nav-burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <h1>Funcionários de IA<br>para a sua clínica</h1>
+        <div class="hero-aside">
+          <p>Atendimento no WhatsApp 24/7, agenda inteligente, CRM automatizado e financeiro — tudo em uma única plataforma, 100% personalizada para a sua clínica.</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary btn-lg">Quero meu Funcionário de IA</a>
+            <a href="#demo" class="btn btn-outline btn-lg">Ver a IA em ação</a>
+          </div>
+          <div class="hero-micro">
+            <span><svg class="ic" width="14" height="14"><use href="#i-check"/></svg> 15 dias grátis</span>
+            <span><svg class="ic" width="14" height="14"><use href="#i-check"/></svg> Sem cartão de crédito</span>
+            <span><svg class="ic" width="14" height="14"><use href="#i-check"/></svg> Implantação personalizada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- painel de demonstração -->
+      <div class="demo" id="demo">
+        <div class="demo-tabs" role="tablist" aria-label="Demonstração da plataforma">
+          <button class="demo-tab active" role="tab" aria-selected="true" data-view="chat"><span class="tab-dot td-1"></span>Atendimento IA</button>
+          <button class="demo-tab" role="tab" aria-selected="false" data-view="platform"><span class="tab-dot td-2"></span>Plataforma</button>
+          <button class="demo-tab" role="tab" aria-selected="false" data-view="crm"><span class="tab-dot td-3"></span>Agenda &amp; CRM</button>
+        </div>
+
+        <div class="demo-stage">
+          <!-- vista 1: chat whatsapp -->
+          <div class="demo-view active" data-view="chat">
+            <div class="chat-wrap">
+              <div class="chat-card">
+                <div class="chat-head">
+                  <div class="chat-avatar"><svg width="18" height="18"><use href="#i-bot"/></svg></div>
+                  <div>
+                    <div class="chat-name">Clínica Exemplo · TrivoxIA</div>
+                    <div class="chat-status"><span class="dot-online"></span> online agora</div>
+                  </div>
+                  <button class="chat-replay" id="chat-replay" title="Repetir demonstração" aria-label="Repetir demonstração">↺</button>
+                </div>
+                <div class="chat-body" id="chat-body" aria-live="polite"></div>
+                <div class="chat-quick" id="chat-quick"></div>
+              </div>
+              <div class="chat-side">
+                <div class="chat-side-title">Enquanto isso, na plataforma</div>
+                <div class="side-event" data-step="3"><span class="se-ico se-purple"><svg width="14" height="14"><use href="#i-funnel"/></svg></span> Lead qualificado no CRM</div>
+                <div class="side-event" data-step="5"><span class="se-ico se-blue"><svg width="14" height="14"><use href="#i-calendar"/></svg></span> Horário reservado na agenda</div>
+                <div class="side-event" data-step="6"><span class="se-ico se-green"><svg width="14" height="14"><use href="#i-check"/></svg></span> Consulta confirmada · lembrete programado</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- vista 2: dashboard -->
+          <div class="demo-view" data-view="platform">
+            <div class="platform">
+              <div class="platform-top">
+                <div class="platform-dots"><span></span><span></span><span></span></div>
+                <div class="platform-url"><svg width="11" height="11"><use href="#i-lock"/></svg> app.trivoxia.com</div>
+              </div>
+              <div class="platform-body">
+                <aside class="platform-side">
+                  <div class="side-section">Principal</div>
+                  <a class="side-item active"><svg width="15" height="15"><use href="#i-chart"/></svg> Dashboard</a>
+                  <a class="side-item"><svg width="15" height="15"><use href="#i-inbox"/></svg> Conversas <span class="side-badge">12</span></a>
+                  <a class="side-item"><svg width="15" height="15"><use href="#i-bot"/></svg> Agentes IA</a>
+                  <a class="side-item"><svg width="15" height="15"><use href="#i-funnel"/></svg> CRM</a>
+                  <div class="side-section">Canais</div>
+                  <a class="side-item"><svg width="15" height="15"><use href="#i-wa"/></svg> WhatsApp</a>
+                  <a class="side-item"><svg width="15" height="15"><use href="#i-ig"/></svg> Instagram</a>
+                </aside>
+                <div class="platform-main">
+                  <div class="pm-head">
+                    <h4>Visão geral</h4>
+                    <div class="pm-actions"><span class="pm-tag live">IA ativa</span><span class="pm-tag">Últimos 30 dias</span></div>
+                  </div>
+                  <div class="pm-kpis">
+                    <div class="pm-kpi"><div class="pm-kpi-label">Conversas</div><div class="pm-kpi-val">234</div><div class="pm-kpi-trend">↑ 34%</div></div>
+                    <div class="pm-kpi"><div class="pm-kpi-label">Resolvidas pela IA</div><div class="pm-kpi-val">90%</div><div class="pm-kpi-trend">↑ 12%</div></div>
+                    <div class="pm-kpi"><div class="pm-kpi-label">Leads</div><div class="pm-kpi-val">200</div><div class="pm-kpi-trend">↑ 48%</div></div>
+                    <div class="pm-kpi"><div class="pm-kpi-label">CSAT</div><div class="pm-kpi-val">4.9</div><div class="pm-kpi-trend">↑ 0.3</div></div>
+                  </div>
+                  <div class="pm-row">
+                    <div class="pm-card">
+                      <h5>Conversas por dia</h5>
+                      <svg viewBox="0 0 320 130" width="100%" height="130" preserveAspectRatio="none" aria-label="Gráfico de conversas por dia, em crescimento">
+                        <defs>
+                          <linearGradient id="ga" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0" stop-color="#6B2EE8" stop-opacity="0.22"/>
+                            <stop offset="1" stop-color="#6B2EE8" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M0,105 L30,88 L60,96 L90,68 L120,78 L150,50 L180,58 L210,40 L240,52 L270,30 L300,22 L320,16 L320,130 L0,130 Z" fill="url(#ga)"/>
+                        <path d="M0,105 L30,88 L60,96 L90,68 L120,78 L150,50 L180,58 L210,40 L240,52 L270,30 L300,22 L320,16" fill="none" stroke="#6B2EE8" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="pm-card">
+                      <h5>Conversas ativas</h5>
+                      <div class="pm-convos">
+                        <div class="pm-convo"><div class="pm-convo-av av-1">M</div><div class="pm-convo-body"><div class="pm-convo-name">Maria Silva <span>agora</span></div><div class="pm-convo-msg">Quero agendar para sexta-feira</div></div><div class="pm-convo-badge">2</div></div>
+                        <div class="pm-convo"><div class="pm-convo-av av-2">J</div><div class="pm-convo-body"><div class="pm-convo-name">João P. <span>2min</span></div><div class="pm-convo-msg">Qual o valor da avaliação?</div></div></div>
+                        <div class="pm-convo"><div class="pm-convo-av av-3">A</div><div class="pm-convo-body"><div class="pm-convo-name">Ana Costa <span>5min</span></div><div class="pm-convo-msg">Obrigada pelo atendimento!</div></div></div>
+                        <div class="pm-convo"><div class="pm-convo-av av-1">C</div><div class="pm-convo-body"><div class="pm-convo-name">Carla M. <span>8min</span></div><div class="pm-convo-msg">Vocês atendem aos sábados?</div></div><div class="pm-convo-badge">1</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- vista 3: agenda + crm + financeiro -->
+          <div class="demo-view" data-view="crm">
+            <div class="crm-grid">
+              <div class="crm-card">
+                <div class="crm-card-head"><svg width="15" height="15"><use href="#i-calendar"/></svg> Agenda · sexta-feira</div>
+                <div class="agenda-list">
+                  <div class="agenda-item"><span class="ag-time">09:00</span><div class="ag-body"><div class="ag-name">Maria Silva</div><div class="ag-proc">Limpeza de pele</div></div><span class="ag-badge ok">Confirmada</span></div>
+                  <div class="agenda-item"><span class="ag-time">10:30</span><div class="ag-body"><div class="ag-name">João Pereira</div><div class="ag-proc">Avaliação inicial</div></div><span class="ag-badge ok">Confirmada</span></div>
+                  <div class="agenda-item"><span class="ag-time">14:00</span><div class="ag-body"><div class="ag-name">Ana Costa</div><div class="ag-proc">Preenchimento labial</div></div><span class="ag-badge wait">Lembrete enviado</span></div>
+                  <div class="agenda-item"><span class="ag-time">16:00</span><div class="ag-body"><div class="ag-name">Carla Mendes</div><div class="ag-proc">Botox · retorno</div></div><span class="ag-badge ia">Agendada pela IA</span></div>
+                </div>
+              </div>
+              <div class="crm-card">
+                <div class="crm-card-head"><svg width="15" height="15"><use href="#i-funnel"/></svg> Funil de pacientes</div>
+                <div class="pipe-cols">
+                  <div class="pipe-col"><h6>Novos</h6><div class="pipe-lead">Fernanda R.<span>Limpeza de pele</span></div><div class="pipe-lead">Paulo S.<span>Avaliação</span></div></div>
+                  <div class="pipe-col"><h6>Em conversa</h6><div class="pipe-lead hl">Juliana M.<span>Preenchimento</span></div></div>
+                  <div class="pipe-col"><h6>Agendados</h6><div class="pipe-lead">Maria S.<span>sex · 09:00</span></div><div class="pipe-lead">Carla M.<span>sex · 16:00</span></div></div>
+                </div>
+                <div class="fin-strip">
+                  <div class="fin-item"><div class="fin-label">Receita do mês</div><div class="fin-val">R$ 42.300</div><div class="fin-trend">↑ 18%</div></div>
+                  <div class="fin-item"><div class="fin-label">A receber</div><div class="fin-val">R$ 7.850</div></div>
+                  <div class="fin-item"><div class="fin-label">Ticket médio</div><div class="fin-val">R$ 480</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-footer">
+          <div class="demo-chips">
+            <span class="chip">WhatsApp 24/7</span>
+            <span class="chip">Agenda inteligente</span>
+            <span class="chip">CRM automatizado</span>
+            <span class="chip">Financeiro</span>
+            <span class="chip">Relatórios</span>
+          </div>
+          <a href="#contato" class="btn btn-primary">Testar a IA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLIENTES ============ -->
+  <section class="clients rule">
+    <div class="container">
+      <div class="clients-head">
+        <p>Quem já confia na TrivoxIA</p>
+        <a href="#resultados" class="btn btn-outline btn-sm">Ver cases</a>
+      </div>
+      <div class="clients-grid">
+        <div class="client-cell">Dra. Eduarda Bongiorno</div>
+        <div class="client-cell">CIVA Oncologia Veterinária</div>
+        <div class="client-cell">De Paula Recuperadora</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTRO SOLUÇÕES ============ -->
+  <section class="intro rule" id="solucoes">
+    <div class="container">
+      <h2 class="intro-title reveal">Atendimento e gestão,<br>na mesma plataforma</h2>
+      <div class="intro-cols reveal">
+        <div>
+          <h3>Funcionário de IA</h3>
+          <p>Atende, qualifica e agenda pacientes no WhatsApp da clínica — em tempo real, a qualquer hora.</p>
+        </div>
+        <div>
+          <h3>Plataforma de gestão</h3>
+          <p>Agenda, CRM automatizado e módulo financeiro organizados sozinhos, sem digitação manual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCO A: FUNCIONÁRIO DE IA ============ -->
+  <section class="product rule">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Funcionário de IA</span>
+          <h2>Atende, qualifica e agenda — enquanto você cuida de quem está na cadeira</h2>
+        </div>
+        <div class="section-aside">
+          <p>Um atendente inteligente treinado com o tom, os tratamentos e os protocolos da sua clínica. Responde em segundos, nunca tira férias e registra tudo automaticamente.</p>
+          <a href="#contato" class="btn btn-primary">Quero conhecer</a>
+        </div>
+      </div>
+
+      <div class="bento reveal">
+        <div class="bento-big">
+          <div class="fbubbles">
+            <div class="fb fb-in">Oi! Vocês fazem limpeza de pele?</div>
+            <div class="fb fb-out">Fazemos sim! 😊 Quer agendar uma avaliação gratuita?</div>
+            <div class="fb fb-in">Quero! Sexta de manhã pode?</div>
+            <div class="fb fb-out">Tenho sexta às 9h30. Confirmo pra você?</div>
+            <div class="fb fb-tag"><svg width="13" height="13"><use href="#i-check"/></svg> Consulta agendada</div>
+          </div>
+          <div class="bento-caption">
+            <h4>Atendimento omnichannel</h4>
+            <p>A IA conversa como gente — no WhatsApp e no Instagram da clínica, 24 horas por dia.</p>
+          </div>
+        </div>
+        <div class="bento-side">
+          <div class="mini-chart-card">
+            <div class="mcc-label">Taxa de conversão</div>
+            <div class="mcc-val">83,4%</div>
+            <svg viewBox="0 0 280 90" width="100%" height="90" preserveAspectRatio="none" aria-label="Gráfico da taxa de conversão em crescimento">
+              <path d="M0,70 L28,62 L56,66 L84,52 L112,56 L140,42 L168,46 L196,32 L224,36 L252,22 L280,16" fill="none" stroke="#6B2EE8" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="280" cy="16" r="4" fill="#fff" stroke="#6B2EE8" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="bento-caption">
+            <h4>Relatórios em tempo real</h4>
+            <p>Conversas, agendamentos e conversão — números claros, sem planilha.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-4 reveal">
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-bot"/></svg></div><h4>100% personalizada</h4><p>Treinada com o tom de voz, os tratamentos e os protocolos da sua clínica.</p></div>
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-zap"/></svg></div><h4>Resposta em segundos</h4><p>Pacientes atendidos na hora — de madrugada, no feriado, no fim de semana.</p></div>
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-funnel"/></svg></div><h4>Qualificação de leads</h4><p>Filtra curiosos, prioriza quem quer agendar e faz follow-up sozinha.</p></div>
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-user"/></svg></div><h4>Atendimento humano</h4><p>Passa para a recepção quando faz sentido — com todo o contexto da conversa.</p></div>
+      </div>
+
+      <div class="story-strip reveal">
+        <div class="story-sq sq-purple"></div>
+        <p><strong>Dra. Eduarda Bongiorno</strong> — agenda cheia e faltas em queda com atendimento de IA no WhatsApp</p>
+        <a href="#resultados" class="btn btn-outline btn-sm">Ver resultados</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCO B: PLATAFORMA ============ -->
+  <section class="product rule" id="plataforma">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Plataforma de gestão</span>
+          <h2>Agenda, CRM e financeiro no piloto automático</h2>
+        </div>
+        <div class="section-aside">
+          <p>Tudo o que a IA faz vira dado organizado: consultas entram na agenda, pacientes avançam no funil e receitas aparecem no financeiro — sem digitar nada.</p>
+          <a href="#demo" class="btn btn-outline">Ver a plataforma</a>
+        </div>
+      </div>
+
+      <div class="cards-4 reveal">
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-calendar"/></svg></div><h4>Agenda inteligente</h4><p>Agendamento, confirmação e lembretes automáticos direto no WhatsApp.</p></div>
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-inbox"/></svg></div><h4>CRM automatizado</h4><p>Cada conversa vira um card no funil — do primeiro contato ao retorno.</p></div>
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-chart"/></svg></div><h4>Módulo financeiro</h4><p>Receitas e pagamentos ligados às consultas, atualizados em tempo real.</p></div>
+        <div class="mini-card"><div class="mc-ico"><svg width="20" height="20"><use href="#i-mail"/></svg></div><h4>Relatórios automáticos</h4><p>O resumo da operação no seu e-mail — taxa de conversão, faltas e receita.</p></div>
+      </div>
+
+      <div class="process reveal">
+        <div class="proc-step"><div class="proc-num">01</div><h4>Conectamos seu WhatsApp</h4><p>Integração com o número da clínica em poucos cliques, sem trocar de chip.</p></div>
+        <div class="proc-step"><div class="proc-num">02</div><h4>Treinamos a sua IA</h4><p>Tratamentos, valores, protocolos e tom de voz — sua IA no ar em poucos dias.</p></div>
+        <div class="proc-step"><div class="proc-num">03</div><h4>Você acompanha tudo</h4><p>Conversas, agenda e resultados em tempo real na plataforma.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTADOS / CASES ============ -->
+  <section class="results rule" id="resultados">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Cases</span>
+          <h2>Clínicas que transformaram o atendimento</h2>
+        </div>
+        <div class="section-aside">
+          <p>Clínicas e consultórios usam o Funcionário de IA da TrivoxIA para atender no WhatsApp, lotar a agenda e reduzir faltas — sem aumentar a equipe.</p>
+        </div>
+      </div>
+
+      <div class="stats-row reveal">
+        <div class="stat"><div class="stat-val" data-count="-70" data-suffix="%">-70%</div><div class="stat-label">Trabalho manual da recepção</div></div>
+        <div class="stat"><div class="stat-val" data-count="3.4" data-prefix="+" data-suffix="×" data-decimal="1">+3,4×</div><div class="stat-label">Mais agendamentos</div></div>
+        <div class="stat"><div class="stat-val" data-count="-62" data-suffix="%">-62%</div><div class="stat-label">Faltas às consultas</div></div>
+        <div class="stat"><div class="stat-val">24/7</div><div class="stat-label">Atendimento disponível</div></div>
+      </div>
+
+      <div class="testi-grid reveal">
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="testi-body">"Antes a recepção perdia ligação o tempo todo. Hoje o Funcionário de IA atende no WhatsApp, agenda e confirma sozinho. As faltas caíram e a agenda vive cheia."</p>
+          <div class="testi-cite">
+            <div class="testi-av">E</div>
+            <div>
+              <div class="testi-name">Dra. Eduarda Bongiorno</div>
+              <div class="testi-role">Clínica Dra. Eduarda Bongiorno</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card testi-cta">
+          <h3>Sua clínica pode ser<br>o próximo case</h3>
+          <p>Fale com a gente, veja a IA funcionando na prática e comece com 15 dias de teste gratuito.</p>
+          <a href="#contato" class="btn btn-primary">Falar com especialista</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="about rule" id="sobre">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Sobre nós</span>
+          <h2>Tecnologia com atendimento de gente</h2>
+        </div>
+        <div class="section-aside">
+          <p>A TrivoxIA nasceu em Chapecó (SC) para resolver um problema real: clínicas perdendo pacientes por demora no WhatsApp. Criamos funcionários de IA 100% personalizados — e a plataforma que organiza a operação inteira.</p>
+        </div>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-card about-brand">
+          <img src="assets/logo-trivoxia-branca.png" alt="" height="40">
+          <p>Chapecó, SC — Brasil</p>
+        </div>
+        <div class="about-card"><h4>Tecnologia</h4><p>IA de ponta aplicada com simplicidade — qualquer pessoa entende e usa.</p></div>
+        <div class="about-card"><h4>Objetividade</h4><p>Sem promessas vagas: métricas claras e resultado que aparece na agenda.</p></div>
+        <div class="about-card"><h4>Transparência</h4><p>Você vê cada conversa, cada agendamento e cada número da operação.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq rule" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2>Perguntas que todo mundo faz</h2>
+        </div>
+      </div>
+      <div class="faq-wrap reveal">
+        <div class="faq-item open">
+          <button class="faq-q" aria-expanded="true"><svg class="faq-ic" width="16" height="16"><use href="#i-sparkle"/></svg><span>O que é a TrivoxIA?</span><svg class="faq-chev" width="18" height="18"><use href="#i-down"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">A TrivoxIA cria Funcionários de IA para clínicas e consultórios: um atendente inteligente que trabalha no seu WhatsApp 24/7 — responde, qualifica, agenda e confirma consultas — e organiza tudo no CRM de forma 100% automática.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><svg class="faq-ic" width="16" height="16"><use href="#i-bot"/></svg><span>O que o Funcionário de IA faz?</span><svg class="faq-chev" width="18" height="18"><use href="#i-down"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Ele atende pacientes no WhatsApp, tira dúvidas, qualifica, agenda e confirma consultas, envia lembretes, faz follow-up de quem não agendou e registra tudo no CRM. Passa para a recepção só quando faz sentido.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><svg class="faq-ic" width="16" height="16"><use href="#i-heart"/></svg><span>O teste grátis é mesmo sem compromisso?</span><svg class="faq-chev" width="18" height="18"><use href="#i-down"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Sim. São 15 dias para testar o Funcionário de IA na sua clínica, sem cartão e sem amarras. Você só continua se fizer sentido.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><svg class="faq-ic" width="16" height="16"><use href="#i-rocket"/></svg><span>Quanto tempo leva para implementar?</span><svg class="faq-chev" width="18" height="18"><use href="#i-down"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Normalmente colocamos seu Funcionário de IA no ar em poucos dias. Configuramos o atendimento, a agenda e o CRM junto com você, com o tom e a identidade da sua clínica.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><svg class="faq-ic" width="16" height="16"><use href="#i-shield"/></svg><span>Os dados dos pacientes ficam seguros?</span><svg class="faq-chev" width="18" height="18"><use href="#i-down"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Sim. Usamos criptografia, servidores seguros e estamos em conformidade com a LGPD. Os dados dos seus pacientes ficam 100% protegidos.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><svg class="faq-ic" width="16" height="16"><use href="#i-link"/></svg><span>Vocês integram com os sistemas que já uso?</span><svg class="faq-chev" width="18" height="18"><use href="#i-down"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Sim. O Funcionário de IA integra com o WhatsApp, sua agenda e os sistemas que sua clínica já usa, centralizando tudo no CRM.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section class="contact rule" id="contato">
+    <div class="container">
+      <div class="contact-box reveal">
+        <div class="contact-left">
+          <span class="eyebrow">Pronto para começar?</span>
+          <h2>Veja a IA da sua clínica funcionando</h2>
+          <p>Fale com um especialista, receba um diagnóstico gratuito e comece com 15 dias de teste.</p>
+          <div class="contact-bullets">
+            <div><svg class="ic" width="15" height="15"><use href="#i-check"/></svg> Diagnóstico gratuito da sua clínica</div>
+            <div><svg class="ic" width="15" height="15"><use href="#i-check"/></svg> Implantação 100% personalizada</div>
+            <div><svg class="ic" width="15" height="15"><use href="#i-check"/></svg> Cancele quando quiser, sem multa</div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="f-nome">Nome completo</label>
+            <input type="text" id="f-nome" name="nome" placeholder="Como devemos te chamar?" required>
+          </div>
+          <div class="form-row">
+            <label for="f-email">E-mail</label>
+            <input type="email" id="f-email" name="email" placeholder="voce@suaclinica.com.br" required>
+          </div>
+          <div class="form-row">
+            <label for="f-wa">WhatsApp</label>
+            <input type="tel" id="f-wa" name="whatsapp" placeholder="(49) 99999-0000" required>
+          </div>
+          <div class="form-row">
+            <label for="f-msg">Conte sobre sua clínica</label>
+            <textarea id="f-msg" name="automatizar" rows="3" placeholder="Especialidade, volume de pacientes, principais dores..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg form-submit">Quero meu Funcionário de IA</button>
+          <div class="form-success" hidden>
+            <div class="fs-check"><svg width="28" height="28"><use href="#i-check"/></svg></div>
+            <h3>Recebemos seu pedido!</h3>
+            <p>Em breve nossa equipe entra em contato pelo WhatsApp.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRÉ-FOOTER ============ -->
+  <section class="prefooter rule">
+    <div class="container prefooter-inner">
+      <h3>Funcionários de IA para clínicas</h3>
+      <div class="prefooter-ctas">
+        <a href="https://wa.me/5549988749755" target="_blank" rel="noopener" class="btn btn-outline">Chamar no WhatsApp</a>
+        <a href="#contato" class="btn btn-primary">Começar agora</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer rule">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo-trivoxia.png" alt="TrivoxIA" height="32">
+        <p>Funcionários de IA para clínicas e consultórios: atendimento no WhatsApp, agenda cheia e tudo organizado num CRM inteligente.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/5549988749755" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20"><use href="#i-wa"/></svg></a>
+          <a href="https://www.instagram.com/trivox.ia/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20"><use href="#i-ig"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Soluções</h4>
+        <a href="#solucoes">Funcionário de IA no WhatsApp</a>
+        <a href="#plataforma">Agenda inteligente</a>
+        <a href="#plataforma">CRM automatizado</a>
+        <a href="#plataforma">Módulo financeiro</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#resultados">Cases</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <span><svg width="13" height="13"><use href="#i-mail"/></svg> contato@trivoxia.com</span>
+        <span><svg width="13" height="13"><use href="#i-phone"/></svg> (49) 98874-9755</span>
+        <span><svg width="13" height="13"><use href="#i-pin"/></svg> Chapecó, SC — Brasil</span>
+        <span><svg width="13" height="13"><use href="#i-shield"/></svg> CNPJ 64.867.533/0001-58</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TrivoxIA. Todos os direitos reservados.</span>
+      <a href="#top">Voltar ao topo ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5549988749755" target="_blank" rel="noopener" class="fab-wa" aria-label="Falar no WhatsApp"><svg width="26" height="26"><use href="#i-wa"/></svg></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

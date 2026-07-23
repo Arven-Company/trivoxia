@@ -1,0 +1,6 @@
+# documentos internos do cliente — não publicar
+references/
+
+# artefatos locais
+.playwright-mcp/
+*.log
