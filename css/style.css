@@ -117,6 +117,7 @@ h3 { font-size: 24px; }
 .btn-outline:hover { background: var(--panel); }
 .btn-ghost { background: transparent; color: var(--ink); }
 .btn-ghost:hover { background: var(--panel); }
+.ic-wa { color: var(--wa); flex: none; }
 
 /* ---------------- header ---------------- */
 .header {
