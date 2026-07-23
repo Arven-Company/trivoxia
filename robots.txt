@@ -1,0 +1,27 @@
+# TrivoxIA — todos os crawlers liberados, incluindo crawlers de IA.
+# Nota: este arquivo só passa a valer na raiz do host quando o domínio
+# trivoxia.com estiver configurado como custom domain (GitHub Pages).
+# Na migração, atualizar a linha Sitemap para https://trivoxia.com/sitemap.xml
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://arven-company.github.io/trivoxia/sitemap.xml

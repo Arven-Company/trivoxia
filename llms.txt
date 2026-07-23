@@ -1,0 +1,28 @@
+# TrivoxIA
+
+> Funcionários de IA para clínicas de estética no Brasil: atendente inteligente
+> no WhatsApp 24/7 + plataforma de gestão (agenda, CRM e financeiro).
+> Sede em Chapecó, SC. CNPJ 64.867.533/0001-58.
+
+A TrivoxIA cria atendentes de IA 100% personalizados que respondem, qualificam,
+agendam e confirmam consultas pelo WhatsApp, integrados a uma plataforma com
+agenda inteligente, CRM automatizado e módulo financeiro. Implantação em poucos
+dias e teste grátis de 15 dias, sem cartão de crédito.
+
+## Principal
+
+- [Página inicial](https://arven-company.github.io/trivoxia/): visão geral do Funcionário de IA e da plataforma
+- [Soluções](https://arven-company.github.io/trivoxia/#solucoes): atendimento e gestão na mesma plataforma
+- [Plataforma de gestão](https://arven-company.github.io/trivoxia/#plataforma): agenda inteligente, CRM automatizado, módulo financeiro, relatórios
+- [Resultados](https://arven-company.github.io/trivoxia/#resultados): cases de clínicas que usam o Funcionário de IA
+- [Dúvidas frequentes](https://arven-company.github.io/trivoxia/#faq): implantação, segurança de dados (LGPD), integrações, teste grátis
+
+## Empresa
+
+- [Sobre a TrivoxIA](https://arven-company.github.io/trivoxia/#sobre): fundada em Chapecó (SC), Brasil
+- Contato: contato@trivoxia.com | WhatsApp +55 49 98874-9755
+- [Contato e teste grátis](https://arven-company.github.io/trivoxia/#contato)
+
+## Optional
+
+- [Instagram](https://www.instagram.com/trivox.ia/): @trivox.ia
